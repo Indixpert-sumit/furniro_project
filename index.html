@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>FURNIRO PAGE</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -126,6 +126,116 @@
     cursor: pointer;
 
   }
+
+
+
+
+
+
+
+
+
+
+
+
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.products-section {
+  padding: 40px 80px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  background: #fff;
+  
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.product-card .description {
+  font-size: 14px;
+  color: #888;
+}
+
+.product-card .price {
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.new-price {
+  font-weight: bold;
+  color: #000;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-left: 8px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.badge.sale {
+  background-color: #e63946;
+}
+
+.badge.new {
+  background-color: #06d6a0;
+}
+
+.show-more {
+  margin-top: 40px;
+}
+
+.show-more button {
+  padding: 10px 20px;
+  background-color: #b88e2f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
 </style>
 
 <body>
@@ -184,116 +294,97 @@
     </section>
   </body>
 
+</head>
+<body>
+  <section class="products-section">
+    <h2 class="section-title">Our Products</h2>
 
-  <section id="products" style="padding: 40px 0;">
-    <div class="container">
-      <h2 style="text-align: center;">Our Products</h2>
-      <div class="product-grid"
-        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px;">
-
-        <div class="product-card">
-          <img src="./assests/css/images/images/image 1.jpg" alt="Slytherine" style="width: 100%;">
-          <h3>Slytherine</h3>
-          <p>Stylish cafe chair</p>
-          <p><del>Rp 3.500.000</del> <strong>Rp 2.500.000</strong></p>
-          <span class="discount">-30%</span>
-        </div>
-
-        <div class="product-card">
-          <img src="./assests/css/images/images/Overlay.jpg" alt="Leviosa" style="width: 100%;">
-          <h3>Leviosa</h3>
-          <p>Stylish chair</p>
-          <p><strong>Rp 2.500.000</strong></p>
-        </div>
-
-        
-        <div class="product-card">
-          <img src="./assests/css/images/images/Images.jpg" alt="Lolito" style="width: 100%;">
-          <h3>Lolito</h3>
-          <p>Luxury big sofa</p>
-          <p><del>Rp 14.000.000</del> <strong>Rp 7.000.000</strong></p>
-          <span class="discount">-50%</span>
-        </div>
-
-        <div class="product-card">
-          <img src="./assests/css/images/images/image 4.jpg" alt="Respira" style="width: 100%;">
-          <h3>Respira</h3>
-          <p>Outdoor table and stool</p>
-          <p><strong>Rp 500.000</strong></p>
-          <span class="new">New</span>
-        </div>
-
-       
-        <div class="product-card">
-          <img src="./assests/css/images/images/Image 5.jpg" alt="Grifo" style="width: 100%;">
-          <h3>Grifo</h3>
-          <p>Night lamp</p>
-          <p><strong>Rp 1.500.000</strong></p>
-        </div>
-
-        
-        <div class="product-card">
-          <img src="./assests/css/images/images/image 6.jpg" alt="Muggo" style="width: 100%;">
-          <h3>Muggo</h3>
-          <p>Small mug</p>
-          <p><strong>Rp 150.000</strong></p>
-        </div>
-
-        <div class="product-card">
-          <img src="./assests/css/images/images/image 7.jpg" alt="Pingky" style="width: 100%;">
-          <h3>Pingky</h3>
-          <p>Cute bed set</p>
-          <p><del>Rp 14.000.000</del> <strong>Rp 7.000.000</strong></p>
-          <span class="discount">-50%</span>
-        </div>
-
-        
-        <div class="product-card">
-          <img src="./assests/css/images/images/Images (1).jpg" alt="Potty" style="width: 100%;">
-          <h3>Potty</h3>
-          <p>Minimalist flower pot</p>
-          <p><strong>Rp 500.000</strong></p>
-          <span class="new">New</span>
-        </div>
-
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="badge sale">-30%</div>
+        <img src="./assests/css/images/images/image 1.jpg" alt="Syltherine">
+        <h3>Syltherine</h3>
+        <p class="description">Stylish cafe chair</p>
+        <p class="price"><span class="new-price">Rp 2.500.000</span> <span class="old-price">Rp 3.500.000</span></p>
       </div>
 
-      <div style="text-align: center; margin-top: 40px;">
-        <button style="padding: 10px 20px; font-weight: bold;">Show More</button>
+      <!-- Product 2 -->
+      <div class="product-card hover">
+        <div class="hover-overlay">
+          <button>Add to cart</button>
+          <div class="hover-actions">
+            <span>Share</span> | <span>Compare</span> | <span>Like</span>
+          </div>
+        </div>
+        <img src="./assests/css/images/images/Pop Up.jpg" alt="Leviosa">
+        <h3>Leviosa</h3>
+        <p class="description">Stylish cafe chair</p>
+        <p class="price">Rp 2.500.000</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="badge sale">-50%</div>
+        <img src="./assests/css/images/images/Images.jpg" alt="Lolito">
+        <h3>Lolito</h3>
+        <p class="description">Luxury big sofa</p>
+        <p class="price"><span class="new-price">Rp 7.000.000</span> <span class="old-price">Rp 14.000.000</span></p>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="badge new">New</div>
+        <img src="./assests/css/images/images/image 4.jpg" alt="Respira">
+        <h3>Respira</h3>
+        <p class="description">Outdoor bar table and stool</p>
+        <p class="price">Rp 500.000</p>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <img src="./assests/css/images/images/Image 5.jpg" alt="Grifo">
+        <h3>Grifo</h3>
+        <p class="description">Night lamp</p>
+        <p class="price">Rp 1.500.000</p>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="badge new">New</div>
+        <img src="./assests/css/images/images/image 6.jpg" alt="Muggo">
+        <h3>Muggo</h3>
+        <p class="description">Small mug</p>
+        <p class="price">Rp 150.000</p>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <div class="badge sale">-50%</div>
+        <img src="./assests/css/images/images/image 7.jpg" alt="Pingky">
+        <h3>Pingky</h3>
+        <p class="description">Cute bed set</p>
+        <p class="price"><span class="new-price">Rp 7.000.000</span> <span class="old-price">Rp 14.000.000</span></p>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <div class="badge new">New</div>
+        <img src="./assests/css/images/images/Images (1).jpg" alt="Potty">
+        <h3>Potty</h3>
+        <p class="description">Minimalist flower pot</p>
+        <p class="price">Rp 500.000</p>
       </div>
     </div>
-  </section>
 
 
-
-  <section id="room-inspiration" style="padding: 60px 0; background-color: #fdf6f0;">
-    <div class="container"
-      style="display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
-
-      
-      <div class="inspiration-text" style="flex: 1; min-width: 3px;">
-        <h2 style="font-size: 30px; font-weight: bold;">50+ Beautiful rooms inspiration</h2>
-        <p style="margin: 20px 0; color: #555;">Our designer already made a lot of beautiful prototype of rooms that
-          inspire you</p>
-        <button
-          style="background-color: #b88e2f; color: white; border: none; padding: 12px 24px; font-weight: bold; cursor: pointer;">
-          Explore More
-        </button>
-      </div>
 
 
 
 
       
       
-      <div class="inspiration-slider" style="flex: 1; min-width: 300px; position: relative;">
-        <div class="slider-card" style="position: relative;">
-          <img src="./assests/css/images/images/Rectangle 24.jpg" alt="Inner Peace Room" style="width: 100%; border-radius: 8px;">
-          <div
-            style="position: absolute; bottom: 20px; left: 20px; background: white; padding: 15px 20px; border-radius: 8px;">
-            <p style="margin: 0; font-size: 12px; color: #888;">01 — Bed Room</p>
-            <h3 style="margin: 5px 0 0 0;">Inner Peace</h3>
-          </div>
+      
           <div style="position: absolute; bottom: 20px; right: 20px;">
             <a href="#"
               style="background-color: #b88e2f; color: white; padding: 12px; border-radius: 50%; display: inline-block; text-decoration: none;">→</a>
@@ -328,14 +419,14 @@
         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; justify-items: center; align-items: center; max-width: 900px; margin: 0 auto;">
 
        
-        <img src="./assests/css/images/images/Rectangle 36.jpg"alt="Gallery Image 1" style="width: 70%; border-radius: 8px;">
-        <img src="./assests/css/images/images/Rectangle 38.jpg"alt="Gallery Image 2" style="width: 100%; border-radius: 8px;">
-        <img src="./assests/css/images/images/Rectangle 40.jpg"alt="Gallery Image 3" style="width: 100%; border-radius: 8px;">
-        <img src="./assests/css/images/images/Rectangle 43.jpg"alt="Gallery Image 4" style="width: 100%; border-radius: 8px;">
-        <img src="./assests/css/images/images/Rectangle 45.jpg"alt="Gallery Image 5" style="width: 100%; border-radius: 8px;">
-        <img src="./assests/css/images/images/Rectangle 37.jpg"alt="Gallery Image 6" style="width: 100%; border-radius: 8px;">
-        <img src="./assests/css/images/images/Rectangle 41.jpg"alt="Gallery Image 7" style="width: 100%; border-radius: 8px;">
-        <img src="./assests/css/images/images/Rectangle 44.jpg"alt="Gallery Image 8" style="width: 100%; border-radius: 8px;">
+        <img src="./assests/css/images/images/Rectangle 36.jpg"alt="Gallery Image 1" style="width: 70%; border-radius: 7px;">
+        <img src="./assests/css/images/images/Rectangle 38.jpg"alt="Gallery Image 2" style="width: 100%; border-radius: 7px;">
+        <img src="./assests/css/images/images/Rectangle 40.jpg"alt="Gallery Image 3" style="width: 100%; border-radius: 7px;">
+        <img src="./assests/css/images/images/Rectangle 43.jpg"alt="Gallery Image 4" style="width: 100%; border-radius: 7px;">
+        <img src="./assests/css/images/images/Rectangle 45.jpg"alt="Gallery Image 5" style="width: 100%; border-radius: 7px;">
+        <img src="./assests/css/images/images/Rectangle 37.jpg"alt="Gallery Image 6" style="width: 100%; border-radius: 1px;">
+        <img src="./assests/css/images/images/Rectangle 41.jpg"alt="Gallery Image 7" style="width: 100%; border-radius: 7px;">
+        <img src="./assests/css/images/images/Rectangle 44.jpg"alt="Gallery Image 8" style="width: 100%; border-radius: 7px;">
 
 
 
